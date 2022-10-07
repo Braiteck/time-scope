@@ -1,0 +1,768 @@
+/*-----------
+    Fonts
+-----------*/
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+    url('../fonts/Lato-Regular.woff') format('woff'),
+    url('../fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: 600;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Lato-Semibold.woff2') format('woff2'),
+    url('../fonts/Lato-Semibold.woff') format('woff'),
+    url('../fonts/Lato-Semibold.ttf') format('truetype');
+}
+
+
+
+/*-------------------
+    Tags carousel
+-------------------*/
+.tags_carousel
+{
+    margin-bottom: 33px;
+    padding: 50px 0 39px;
+
+    background: #faf9f4;
+}
+
+
+.tags_carousel .swiper
+{
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+
+.tags_carousel .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.tags_carousel .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.tags_carousel .item
+{
+    color: #000;
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 17px;
+
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.tags_carousel .item .thumb
+{
+    display: flex;
+
+    height: 157px;
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+    background: #fff;
+
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tags_carousel .item .thumb img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/*------------
+    Brands
+------------*/
+.brands
+{
+    padding: 45px 0 47px;
+
+    background: #faf9f4;
+}
+
+
+.brands .tabs
+{
+    display: flex;
+
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.brands .tabs button
+{
+    color: #fff;
+    font-family: 'Lato';
+    font-size: 17px;
+    line-height: 20px;
+
+    position: relative;
+
+    display: flex;
+
+    padding: 12px 36px;
+
+    cursor: pointer;
+    transition: .2s linear;
+    text-align: center;
+
+    border: none;
+    background: #93845d;
+
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brands .tabs button + button
+{
+    margin-left: 12px;
+}
+
+
+.brands .tabs button:hover,
+.brands .tabs button.active
+{
+    color: #000;
+
+    background: #fff;
+}
+
+
+.brands .tab_content
+{
+    position: relative;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    height: 0;
+
+    pointer-events: none;
+
+    opacity: 0;
+    background: #fff;
+}
+
+.brands .tab_content.active
+{
+    visibility: visible;
+    overflow: visible;
+
+    height: auto;
+    padding: 27px 45px;
+
+    transition: opacity .5s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.brands .row
+{
+    display: flex;
+
+    margin-bottom: -17px;
+    margin-left: -17px;
+
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.brands .row > *
+{
+    /* width: calc(14.285% - 17px); */
+    margin-bottom: 17px;
+    margin-left: 17px;
+}
+
+
+.brands .item
+{
+    color: #93845d;
+    font-family: 'Lora';
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 24px;
+
+    display: flex;
+
+    height: 84px;
+
+    text-decoration: none;
+
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brands .item img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/*-----------------------
+    Gender categories
+-----------------------*/
+.gender_categories
+{
+    display: flex;
+
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.gender_categories .category
+{
+    color: #fff;
+    font-family: 'Lato';
+
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+
+    width: 50%;
+    height: 496px;
+
+    text-align: center;
+    text-decoration: none;
+
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gender_categories .category:before
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+}
+
+
+.gender_categories .category .thumb
+{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background: #ddd;
+
+    object-fit: cover;
+}
+
+
+.gender_categories .category .info
+{
+    position: relative;
+    z-index: 3;
+
+    padding: 52px;
+}
+
+.gender_categories .category .info:before
+{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 164px;
+    height: calc(100% - 110px);
+    margin: auto;
+
+    content: '';
+
+    background: #93845d;
+}
+
+
+.gender_categories .category .name
+{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+
+    position: relative;
+}
+
+.gender_categories .category .name:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -23px;
+    left: 0;
+
+    display: block;
+
+    width: 43px;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+
+    background: currentColor;
+}
+
+
+.gender_categories .category .btn
+{
+    font-size: 18px;
+    line-height: 57px;
+
+    display: block;
+
+    width: 205px;
+    height: 59px;
+    margin: 123px auto 0;
+
+    transition: .2s linear;
+
+    border: 1px solid #fff;
+}
+
+.gender_categories .category:hover .btn
+{
+    color: #000;
+
+    background: #fff;
+}
+
+
+
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Tags carousel
+    -------------------*/
+    .tags_carousel
+    {
+        margin-bottom: 40px;
+        padding: 40px 0;
+    }
+
+    .tags_carousel .swiper
+    {
+        padding: 0 72px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands
+    {
+        padding: 40px 0;
+    }
+
+    .brands .tabs button
+    {
+        font-size: 16px;
+
+        padding: 12px 32px;
+    }
+
+
+    .brands .tab_content.active
+    {
+        padding: 24px;
+    }
+
+
+    .brands .row
+    {
+        margin-bottom: -12px;
+        margin-left: -12px;
+    }
+
+    .brands .row > *
+    {
+        /* width: calc(20% - 12px); */
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
+
+
+
+    /*-----------------------
+        Gender categories
+    -----------------------*/
+    .gender_categories .category
+    {
+        height: 420px;
+    }
+
+
+    .gender_categories .category .info
+    {
+        padding: 40px;
+    }
+
+    .gender_categories .category .info:before
+    {
+        width: 140px;
+        height: calc(100% - 96px);
+    }
+
+
+    .gender_categories .category .name
+    {
+        font-size: 44px;
+        line-height: 54px;
+    }
+
+    .gender_categories .category .name:after
+    {
+        bottom: -20px;
+    }
+
+
+    .gender_categories .category .btn
+    {
+        font-size: 16px;
+        line-height: 50px;
+
+        width: 180px;
+        height: 52px;
+        margin-top: 100px;
+    }
+}
+
+
+
+@media print,
+(max-width: 1023px)
+{
+    /*------------
+        Brands
+    ------------*/
+    .brands .tabs button
+    {
+        font-size: 15px;
+
+        padding: 12px 24px;
+    }
+
+
+    .brands .row
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 10px 20px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .brands .row::-webkit-scrollbar
+    {
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .brands .row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .brands .item
+    {
+        display: inline-block;
+
+        max-width: none;
+        height: auto;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .brands .item + .item
+    {
+        margin-left: 36px;
+    }
+
+
+
+    /*-----------------------
+        Gender categories
+    -----------------------*/
+    .gender_categories .category
+    {
+        height: 360px;
+    }
+
+
+    .gender_categories .category .info
+    {
+        padding: 32px;
+    }
+
+    .gender_categories .category .info:before
+    {
+        width: 120px;
+        height: calc(100% - 80px);
+    }
+
+
+    .gender_categories .category .name
+    {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .gender_categories .category .name:after
+    {
+        bottom: -12px;
+    }
+
+
+    .gender_categories .category .btn
+    {
+        font-size: 15px;
+        line-height: 46px;
+
+        width: 160px;
+        height: 48px;
+        margin-top: 72px;
+    }
+}
+
+
+
+@media print,
+(max-width: 767px)
+{
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        width: 36px;
+        height: 72px;
+    }
+
+
+
+    /*-------------------
+        Tags carousel
+    -------------------*/
+    .tags_carousel .swiper
+    {
+        padding: 0 52px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .tabs
+    {
+        justify-content: space-between;
+    }
+
+
+    .brands .tabs button
+    {
+        font-size: 14px;
+
+        padding: 12px 20px;
+    }
+
+    .brands .tabs button + button
+    {
+        margin-left: 0;
+    }
+
+
+    .brands .tab_content.active
+    {
+        padding: 20px;
+    }
+
+
+    .brands .item
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*-----------------------
+        Gender categories
+    -----------------------*/
+    .gender_categories .category
+    {
+        width: 100%;
+        height: 320px;
+    }
+
+
+    .gender_categories .category .info:before
+    {
+        width: 116px;
+        height: calc(100% - 76px);
+    }
+
+
+    .gender_categories .category .name
+    {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .gender_categories .category .name:after
+    {
+        bottom: -16px;
+    }
+}
+
+
+
+@media print,
+(max-width: 479px)
+{
+    /*------------
+        Brands
+    ------------*/
+    .brands .tabs
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+        padding: 0 10px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .brands .tabs::-webkit-scrollbar
+    {
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .brands .tabs::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .brands .tabs button
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .brands .tabs button + button
+    {
+        margin-left: 4px;
+    }
+
+
+
+    /*-----------------------
+        Gender categories
+    -----------------------*/
+    .gender_categories .category .name
+    {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
