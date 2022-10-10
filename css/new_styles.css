@@ -4,6 +4,18 @@
 @font-face
 {
     font-family: 'Lato';
+    font-weight: 300;
+    font-style: normal;
+
+    font-display: swap;
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+    url('../fonts/Lato-Light.woff') format('woff'),
+    url('../fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Lato';
     font-weight: normal;
     font-style: normal;
 
@@ -408,6 +420,324 @@
 
 
 
+/*----------------
+    Video link
+----------------*/
+.video_link
+{
+    color: #fff;
+
+    display: block;
+
+    width: 100%;
+    width: 476px;
+    max-width: 100%;
+    margin-top: 28px;
+
+    text-decoration: none;
+}
+
+
+.video_link .thumb
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding-bottom: 56.3%;
+
+    background: #ddd;
+}
+
+.video_link .thumb:after
+{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: linear-gradient(0deg, rgba(50, 45, 31, .51), rgba(50, 45, 31, .51));
+}
+
+
+.video_link .thumb img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.video_link .thumb .icon
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 87px;
+    height: 87px;
+    margin: auto;
+
+    border-radius: 50%;
+    background: url(../images/ic_video_play.svg) calc(50% + 2px) 50% no-repeat #93845d;
+}
+
+
+
+/*---------------------
+    Categories wall
+---------------------*/
+.categories_wall
+{
+    margin-top: 40px;
+}
+
+
+.categories_wall .row
+{
+    display: flex;
+
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.categories_wall .row > *
+{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.categories_wall .item
+{
+    color: #fff;
+
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    height: 238px;
+    padding: 31px 34px;
+
+    text-decoration: none;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.categories_wall .item.alignright
+{
+    text-align: right;
+
+    justify-content: flex-end;
+}
+
+.categories_wall .item.center
+{
+    align-items: center;
+    align-content: center;
+}
+
+.categories_wall .item.bottom
+{
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.categories_wall .item.dark
+{
+    color: #000;
+    font-weight: 300;
+}
+
+
+.categories_wall .item .thumb
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background: #ddd;
+}
+
+.categories_wall .item .thumb img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.categories_wall .item .info
+{
+    position: relative;
+    z-index: 3;
+
+    width: 386px;
+    max-width: 100%;
+}
+
+
+.categories_wall .item .exclusive
+{
+    color: #fbe486;
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 12px;
+}
+
+
+.categories_wall .item .name
+{
+    font-size: 35px;
+    line-height: 42px;
+
+    display: inline-block;
+
+    padding-bottom: 7px;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.categories_wall .item .name.no_border
+{
+    padding: 0;
+
+    border: none;
+}
+
+
+.categories_wall .item .title
+{
+    font-size: 28px;
+    line-height: 34px;
+}
+
+
+.categories_wall .item .author
+{
+    color: #fbe486;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 24px;
+
+    margin-top: 23px;
+}
+
+
+.categories_wall .item .desc
+{
+    font-size: 12px;
+    line-height: 14px;
+
+    margin-top: 15px;
+
+    text-transform: uppercase;
+}
+
+
+
+/*-----------------
+    Bottom text
+-----------------*/
+.bottom_text
+{
+    margin-top: 60px;
+}
+
+
+
+/*----------------
+    Typography
+----------------*/
+.text_block
+{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.text_block > *
+{
+    margin-bottom: 20px;
+}
+
+
+.text_block > :last-child
+{
+    margin-bottom: 0 !important;
+}
+
+.text_block > :first-child
+{
+    margin-top: 0 !important;
+}
+
+
+.text_block h2
+{
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 42px;
+
+    margin-bottom: 20px !important;
+}
+
+
+.text_block * + h2
+{
+    margin-top: 43px;
+}
+
+.text_block h2 + *
+{
+    margin-top: 0 !important;
+}
+
+
+
 @media print,
 (max-width: 1279px)
 {
@@ -505,6 +835,77 @@
         width: 180px;
         height: 52px;
         margin-top: 100px;
+    }
+
+
+
+    /*---------------------
+        Categories wall
+    ---------------------*/
+    .categories_wall .item
+    {
+        height: 192px;
+        padding: 28px;
+    }
+
+
+    .categories_wall .item .info
+    {
+        width: 320px;
+    }
+
+
+    .categories_wall .item .exclusive
+    {
+        font-size: 18px;
+        line-height: 22px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .categories_wall .item .name
+    {
+        font-size: 30px;
+        line-height: 38px;
+
+        padding-bottom: 5px;
+    }
+
+
+    .categories_wall .item .title
+    {
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+
+    .categories_wall .item .author
+    {
+        font-size: 18px;
+        line-height: 22px;
+
+        margin-top: 20px;
+    }
+
+
+    .categories_wall .item .desc
+    {
+        font-size: 11px;
+        line-height: 13px;
+
+        margin-top: 16px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h2
+    {
+        font-size: 32px;
+        line-height: 38px;
     }
 }
 
@@ -613,6 +1014,73 @@
         height: 48px;
         margin-top: 72px;
     }
+
+
+
+    /*---------------------
+        Categories wall
+    ---------------------*/
+    .categories_wall .item
+    {
+        height: 180px;
+        padding: 24px;
+    }
+
+
+    .categories_wall .item .info
+    {
+        width: 280px;
+    }
+
+
+    .categories_wall .item .exclusive
+    {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+    .categories_wall .item .name
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+
+    .categories_wall .item .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .categories_wall .item .author
+    {
+        font-size: 16px;
+        line-height: 20px;
+
+        margin-top: 16px;
+    }
+
+
+    .categories_wall .item .desc
+    {
+        font-size: 10px;
+        line-height: 14px;
+
+        margin-top: 12px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h2
+    {
+        font-size: 30px;
+        line-height: 38px;
+    }
 }
 
 
@@ -701,6 +1169,40 @@
     {
         bottom: -16px;
     }
+
+
+
+    /*---------------------
+        Categories wall
+    ---------------------*/
+    .categories_wall .row
+    {
+        margin-left: 0;
+    }
+
+    .categories_wall .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+    .text_block h2
+    {
+        font-size: 27px;
+        line-height: 33px;
+    }
 }
 
 
@@ -764,5 +1266,45 @@
     {
         font-size: 32px;
         line-height: 42px;
+    }
+
+
+
+    /*---------------------
+        Categories wall
+    ---------------------*/
+    .categories_wall .item
+    {
+        height: 160px;
+        padding: 20px;
+    }
+
+    .categories_wall .item .name
+    {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .categories_wall .item .exclusive
+    {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .categories_wall .item .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h2
+    {
+        font-size: 25px;
+        line-height: 31px;
     }
 }
